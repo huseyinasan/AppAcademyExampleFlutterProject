@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ogrenci_app/pages/navigation_bar.dart';
 import 'package:ogrenci_app/pages/ogrenciler_sayfasi.dart';
 import 'package:ogrenci_app/pages/mesajlar_sayfasi.dart';
 import 'package:ogrenci_app/pages/ogretmenler_sayfasi.dart';
@@ -67,6 +68,14 @@ class _AnaSayfaState extends State<AnaSayfa> {
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
+            ),
+            ListTile(
+              title: Text('NavigationBar'),
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) => NavigationBarPage(),
+                ));
+              },
             ),
             ListTile(
               title: Text('Öğrenciler'),
@@ -153,5 +162,7 @@ class _AnaSayfaState extends State<AnaSayfa> {
     );
   }
 }
+
+
 
 
