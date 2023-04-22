@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "688962830952",
+    "firebase_url": "https://flutter-akademi-e27e7-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "flutter-akademi-e27e7",
+    "storage_bucket": "flutter-akademi-e27e7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:688962830952:android:883348b7dff1088078f1dd",
+        "android_client_info": {
+          "package_name": "com.example.ogrenci_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "688962830952-h2j72b2isd24gujnnuabt88ag0as1dg4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.ogrenci_app",
+            "certificate_hash": "7181c43d0e37b78ac4d1cacc74aa8380de5d87eb"
+          }
+        },
+        {
+          "client_id": "688962830952-n82c0e3uhjctaamuds0est7chbkr1tf5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwsKBjqmso0GxFL4dLXoTNe2Vpgakqx0U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "688962830952-clkcnnq1jj93qrltd0cl48kqegqnte4q.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "688962830952-cka4ep4c49tulnp27vkv3jah6do43ifo.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.a.b"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

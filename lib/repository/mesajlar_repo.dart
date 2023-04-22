@@ -1,4 +1,8 @@
-class MesajlarRepository{
+import 'package:flutter/cupertino.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ogrenci_app/modals/mesaj.dart';
+
+class MesajlarRepository extends ChangeNotifier{
 
   final List <Mesaj> mesajlar = [
     Mesaj("Merhaba, Ayşe naber!", "Huseyin", DateTime.now().subtract(const Duration(minutes:3 ))),
@@ -8,14 +12,21 @@ class MesajlarRepository{
 
   ];
 
-  int yeniMesajSayisi = 4;
-
 }
 
-class Mesaj{
-  String yazi;
-  String gonderen;
-  DateTime zaman;
+final mesajlarProvider = ChangeNotifierProvider((ref){
+  return  MesajlarRepository();
+});
 
-  Mesaj(this.yazi, this.gonderen, this.zaman);
+class YeniMesajSayisi extends StateNotifier<int>{
+  YeniMesajSayisi(int state) : super(state);
+
+  void sifirla(){
+    state = 0;
+  }
 }
+
+final yeniMesajSayisiProvider = StateNotifierProvider<YeniMesajSayisi, int>((ref) {
+    return YeniMesajSayisi(4);
+});
+

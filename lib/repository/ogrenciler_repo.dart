@@ -1,4 +1,8 @@
-class OgrencilerRepository{
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+import 'package:ogrenci_app/modals/ogrenci.dart';
+
+class OgrencilerRepository extends ChangeNotifier {
 
   List ogrenciler = [
     Ogrenci("Huseyin", "Asan", 24, "Erkek"),
@@ -13,6 +17,7 @@ class OgrencilerRepository{
     }else{
       sevdiklerim.remove(ogrenci);
     }
+    notifyListeners();
   }
 
   bool seviyorMu(Ogrenci ogrenci) {
@@ -20,11 +25,7 @@ class OgrencilerRepository{
   }
 }
 
-class Ogrenci{
-  String ad;
-  String soyad;
-  int yas;
-  String cinsiyet;
+final ogrencilerProvider = ChangeNotifierProvider((ref) {
+  return OgrencilerRepository();
+});
 
-  Ogrenci(this.ad, this.soyad, this.yas, this.cinsiyet);
-}
